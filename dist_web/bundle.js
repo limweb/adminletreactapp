@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "8fecd7b5180778ea8ae8"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "27eeb3f3a8c977bc68d5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -73497,7 +73497,11 @@
 	          null,
 	          menu.name
 	        ),
-	        _react2.default.createElement('i', { className: 'fa fa-angle-left pull-right' })
+	        _react2.default.createElement(
+	          'i',
+	          { className: menu.clsr },
+	          menu.spancls
+	        )
 	      ),
 	      _react2.default.createElement(
 	        'ul',
@@ -73516,7 +73520,11 @@
 	                  null,
 	                  child.name
 	                ),
-	                _react2.default.createElement('i', { className: 'fa fa-angle-left pull-right' })
+	                _react2.default.createElement(
+	                  'i',
+	                  { className: child.clsr },
+	                  child.spancls
+	                )
 	              ),
 	              _react2.default.createElement(
 	                'ul',
@@ -73535,7 +73543,11 @@
 	                          null,
 	                          child.name
 	                        ),
-	                        _react2.default.createElement('i', { className: 'fa fa-angle-left pull-right' })
+	                        _react2.default.createElement(
+	                          'i',
+	                          { className: child.clsr },
+	                          child.spancls
+	                        )
 	                      ),
 	                      _react2.default.createElement(
 	                        'ul',
@@ -73553,7 +73565,11 @@
 	                                null,
 	                                child.name
 	                              ),
-	                              _react2.default.createElement('i', { 'class': 'fa fa-angle-left pull-right' })
+	                              _react2.default.createElement(
+	                                'i',
+	                                { className: child.clsr },
+	                                child.spancls
+	                              )
 	                            )
 	                          );
 	                        })
@@ -73572,7 +73588,11 @@
 	                          null,
 	                          child.name
 	                        ),
-	                        _react2.default.createElement('i', { 'class': 'fa fa-angle-left pull-right' })
+	                        _react2.default.createElement(
+	                          'i',
+	                          { className: child.clsr },
+	                          child.spancls
+	                        )
 	                      )
 	                    );
 	                  }
@@ -73592,7 +73612,11 @@
 	                  null,
 	                  child.name
 	                ),
-	                _react2.default.createElement('i', { 'class': 'fa fa-angle-left pull-right' })
+	                _react2.default.createElement(
+	                  'i',
+	                  { className: child.clsr },
+	                  child.spancls
+	                )
 	              )
 	            );
 	          }
@@ -73611,6 +73635,11 @@
 	          'span',
 	          null,
 	          menu.name
+	        ),
+	        _react2.default.createElement(
+	          'small',
+	          { className: menu.clsr },
+	          menu.spancls
 	        )
 	      )
 	    );
@@ -78125,11 +78154,11 @@
 	        "to": "#",
 	        "cls": "fa fa-share",
 	        "name": "Multilevel",
-	        "clsr": "",
+	        "clsr": "fa fa-angle-left pull-right",
 	        "spancls": "",
 	        "parent": 0,
-	        "created_at": "2016-05-09 15:07:11",
-	        "updated_at": "2016-05-09 15:07:11",
+	        "created_at": "2016-05-09 16:54:31",
+	        "updated_at": "2016-05-09 16:54:31",
 	        "children": [{
 	            "id": 42,
 	            "__type__": "treeview-menu",
@@ -78139,8 +78168,8 @@
 	            "clsr": "fa fa-angle-left pull-right",
 	            "spancls": "",
 	            "parent": 41,
-	            "created_at": "2016-05-09 15:08:47",
-	            "updated_at": "2016-05-09 15:08:47",
+	            "created_at": "2016-05-09 16:54:48",
+	            "updated_at": "2016-05-09 16:54:48",
 	            "children": [{
 	                "id": 43,
 	                "__type__": "treeview-menu",
@@ -78159,11 +78188,11 @@
 	                "to": "#",
 	                "cls": "fa fa-circle-o",
 	                "name": "Level Two",
-	                "clsr": "",
+	                "clsr": "fa fa-angle-left pull-right",
 	                "spancls": "",
 	                "parent": 42,
-	                "created_at": "2016-05-09 15:09:00",
-	                "updated_at": "2016-05-09 15:09:00",
+	                "created_at": "2016-05-09 16:54:50",
+	                "updated_at": "2016-05-09 16:54:50",
 	                "children": [{
 	                    "id": 45,
 	                    "__type__": "treeview-menu",

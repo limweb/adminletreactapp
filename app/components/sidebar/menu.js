@@ -6,36 +6,36 @@ const Lnk =  (props) => {
    let menu = props.menu;
    if(menu.children != undefined && menu.children.length > 0 ){
     return (<li className="treeview" >
-            <Link to={menu.to}><i className={menu.cls}></i><span>{menu.name}</span><i className="fa fa-angle-left pull-right"></i></Link>
+            <Link to={menu.to}><i className={menu.cls}></i><span>{menu.name}</span><i className={menu.clsr}>{menu.spancls}</i></Link>
             <ul className="treeview-menu">
             { menu.children.map(function(child){
               if(child.children.length > 0) {
                   return (<li className="treeview" >
-                          <Link to={child.to}><i className={child.cls}></i><span>{child.name}</span><i className="fa fa-angle-left pull-right"></i></Link>
+                          <Link to={child.to}><i className={child.cls}></i><span>{child.name}</span><i className={child.clsr}>{child.spancls}</i></Link>
                           <ul className="treeview-menu">
                           { child.children.map(function(child){
                             if(child.children.length > 0 ) {
                             return (<li className="treeview" >
-                              <Link to={child.to}><i className={child.cls}></i><span>{child.name}</span><i className="fa fa-angle-left pull-right"></i></Link>
+                              <Link to={child.to}><i className={child.cls}></i><span>{child.name}</span><i className={child.clsr}>{child.spancls}</i></Link>
                               <ul className="treeview-menu">
                               { child.children.map(function(child){
-                                return <li key={child.id}><Link to={child.to}><i className={child.cls}></i><span>{child.name}</span><i class="fa fa-angle-left pull-right"></i></Link></li>
+                                return (<li key={child.id}><Link to={child.to}><i className={child.cls}></i><span>{child.name}</span><i className={child.clsr}>{child.spancls}</i></Link></li>);
                               })}
                               </ul></li>);
                             } else {
-                              return <li key={child.id}><Link to={child.to}><i className={child.cls}></i><span>{child.name}</span><i class="fa fa-angle-left pull-right"></i></Link></li>
+                              return <li key={child.id}><Link to={child.to}><i className={child.cls}></i><span>{child.name}</span><i className={child.clsr}>{child.spancls}</i></Link></li>
                             }
                             })
                           }
                          </ul></li>);
               } else {
-               return (<li key={child.id}><Link to={child.to}><i className={child.cls}></i><span>{child.name}</span><i class="fa fa-angle-left pull-right"></i></Link></li>);
+               return (<li key={child.id}><Link to={child.to}><i className={child.cls}></i><span>{child.name}</span><i className={child.clsr} >{child.spancls}</i></Link></li>);
               }
             })}
             </ul>
            </li>);
   } else {
-    return (<li><Link to={menu.to}><i className={menu.cls}></i><span>{menu.name}</span></Link></li>);
+    return (<li><Link to={menu.to}><i className={menu.cls}></i><span>{menu.name}</span><small className={menu.clsr}>{menu.spancls}</small></Link></li>);
   }
 
 } 
