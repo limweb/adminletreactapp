@@ -1,0 +1,33 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+var connection = false;
+socket = io.connect();
+window.socket = socket;
+console.log(socket.connect().connected);
+
+socket.on('connect', function(){
+  console.log("----- connect -----------------------");
+  console.log('check 2', socket.connected);
+  connection = true;
+           // current_select_room = '';
+           //  console.log('init : ',socket.connect().connected);
+           socket.emit('adduser','thongchai');
+           
+           });
+
+// Emit ready event.
+console.log('emit ready');
+socket.emit('ready')
+
+// Listen for the talk event.
+socket.on('talk', function(data) {
+	console.log('on talk',data);
+    //alert(data.message);
+    alert(data);
+    })
+
+socket.on('clientlog',function(data){
+	console.log(data);
+  });
+
+</script>
