@@ -75,7 +75,7 @@ app.on('ready', () => {
     });
 
     if (process.env.NODE_ENV === 'development') {
-        mainWindow.openDevTools();
+        // mainWindow.openDevTools();
     }
 
     if (process.platform === 'darwin') {
@@ -242,7 +242,16 @@ app.on('ready', () => {
                                     buttons: ["OK"]
                         });                
                     }
-                },
+                }, {
+        label: 'Undo',
+        accelerator: 'CmdOrCtrl+Z',
+        role: 'undo'
+      },
+      {
+        label: 'Redo',
+        accelerator: 'Shift+CmdOrCtrl+Z',
+        role: 'redo'
+      },
 
                 {
                     label: 'Toggle &Full Screen',

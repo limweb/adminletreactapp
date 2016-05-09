@@ -5,28 +5,50 @@
     <title>Hello Electron React!</title>
     <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="plugins/morris/morris.css">
     <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
     <script>
-      (function() {
+    /*  (function() {
         if (!process.env.HOT) {
           const link = document.createElement('link');
           link.rel = 'stylesheet';
           link.href = '../dist/style.css';
           document.write(link.outerHTML);
         }
-      }());
+      }()); */
     </script>
     <script src="plugins/jQuery/jQuery-2.2.0.min.js"></script>
     <script>window.jQuery = window.$ = typeof module === 'object' ? module.exports : jQuery</script> 
+    <script>
+
+    </script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="dist/js/app.js"></script>
+    <script src="dist/js/demo.js"></script>
     <script src="plugins/slimScroll/jquery.slimscroll.js"></script>
+    <script src="plugins/chartjs/Chart.min.js"></script>
+    <script src="plugins/morris/morris.min.js"></script>
+    <script src="plugins/flot/jquery.flot.min.js"></script>
+    <script src="plugins/flot/jquery.flot.resize.min.js"></script>
+    <script src="plugins/flot/jquery.flot.pie.min.js"></script>
+    <script src="plugins/flot/jquery.flot.categories.min.js"></script>
+    <script src="plugins/fastclick/fastclick.js"></script>
+    <script src="dist/chartjs/fotchart.js"></script> 
+    <script src="dist/chartjs/chartjs.js"></script> 
+    <script src="dist/js/eve.js"></script>
+    <script src="dist/js/raphael-min.js"></script>
+    <script src="dist/chartjs/morris.js"></script> 
+    <script src="dist/js/bootbox.min.js"></script>
+
   </head>
-  <body>
+
+<body class="hold-transition skin-green sidebar-mini fixed">
+  <div class="wrapper">
     <div id="root"></div>
+  </div>
     <script>
       (function() {
         const script = document.createElement('script');

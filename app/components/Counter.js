@@ -1,18 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React,{ PropTypes } from 'react'
 import { Link } from 'react-router';
 import styles from './Counter.css';
 
-class Counter extends Component {
-  static propTypes = {
-    increment: PropTypes.func.isRequired,
-    incrementIfOdd: PropTypes.func.isRequired,
-    incrementAsync: PropTypes.func.isRequired,
-    decrement: PropTypes.func.isRequired,
-    counter: PropTypes.number.isRequired
-  };
 
-  render() {
-    const { increment, incrementIfOdd, incrementAsync, decrement, counter } = this.props;
+const Counter = (props) => {
+    const { increment, incrementIfOdd, incrementAsync, decrement, counter } = props;
     return (
       <div>
         <div className={styles.backButton}>
@@ -35,7 +27,19 @@ class Counter extends Component {
         </div>
       </div>
     );
-  }
 }
 
-export default Counter;
+Counter.propTypes = {
+    increment: PropTypes.func.isRequired,
+    incrementIfOdd: PropTypes.func.isRequired,
+    incrementAsync: PropTypes.func.isRequired,
+    decrement: PropTypes.func.isRequired,
+    counter: PropTypes.number.isRequired
+}
+
+Counter.defaultProps = {
+  
+};
+
+
+export default Counter
